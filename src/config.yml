@@ -1,0 +1,58 @@
+###
+###  Permissions:
+### - mgladiador.command.specs
+### - mgladiador.command.info
+### - mgladiador.admin
+### - mgladiador.bypass.globalcommands
+###
+Gladiador:
+ requisitos:
+  membrosMaximosPorClan: 15
+  clans: 2
+  jogadores: 2
+ chamando:
+  avisos: 10 #Quantidade de chamadas
+  tempo: 10
+ iniciando:
+  avisos: 3 #Quantidade de chamadas
+  tempo: 10
+ deathmatch:
+  avisos: 3
+  tempo: 20
+  forceDeathmatchtime: 3600
+  clans: 4 #quantidade maxima de clans para iniciar deathmatch automaticamente (Caso tenha mais clans que isso apenas será iniciado deathmatch quando passar o tempo especificado acima)
+ ganhadores:
+  estarVivo: false #Para receber a tag quando o gladiador for finalizado os membros precisam estar vivo?
+  mito:
+   prefixo: '&5[Mito] &r'
+   atual: 'yMatheus_'
+   premio: 10000
+  gladiadores:
+   prefixo: '&6[Gladiador] &r'
+   atuais: []
+   premio: 10000
+Comandos:
+ gladiadorHabilitados: #Lista de comandos permitidos para os participantes do evento gladiador.
+ - '/gladiador sair'
+ - '/g'
+ - '/report'
+ - '/tell'
+ - '/.'
+ globalCommandsBloqueados: #Lista de comandos de clan bloqueados durante o evento gladiador.
+ - '/clan invite'
+ - '/clan kick'
+ - '/clan resign'
+ - '/clan alliances'
+ - '/clan ally'
+ - '/clan home'
+ - '/clan war'
+ - '/clan disband'
+ espectadoresHabilitados: #Lista de comandos permitidos para os espectadores do evento gladiador.
+ - '/gladiador camarote'
+ - '/gladiador specs'
+ - '/g'
+ - '/report'
+ - '/tell'
+ - '/.'
+Top:
+ update: 10 #Taxa de atualização do top gladiador e mito (Em segundos)

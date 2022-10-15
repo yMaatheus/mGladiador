@@ -1,0 +1,49 @@
+chamando:
+ botao: '&lPARTICIPAR'
+ anuncio:
+ - ''
+ - '&bEvento gladiador começando!'
+ - '&bPara participar, clique em: @botao'
+ - '&bTempo restante: &f@tempo segundos'
+ - '&bClans: @clans - Jogadores: @players'
+ - ''
+fechou:
+- ''
+- '&bEvento gladiador foi fechado!'
+- '&bPvP será iniciado em: &f@tempo segundos'
+- '&bClans: @clans - Jogadores: @players'
+- ''
+iniciou:
+- ''
+- '&bO PvP do evento Gladiador foi iniciado!'
+- '&bClans: @clans - Jogadores: @players'
+- ''
+cancelado:
+ geral:
+ - ''
+ - '&bEvento gladiador foi cancelado!'
+ - '&bJogadores sendo enviados para a saida.'
+ - ''
+ quantidadeInvalida:
+ - ''
+ - '&bEvento gladiador foi cancelado!'
+ - '&bMotivo: Número de clans ou jogadores foi insuficiente.'
+ - '&bJogadores sendo enviados para a saida.'
+ - ''
+deathmatch:
+- ''
+- '&bO PvP do evento Gladiador foi desativado!'
+- '&bTodos os jogadores foram teleportados para o Deathmatch.'
+- '&bPvP será iniciado novamente em: &f@tempo segundos'
+- '&bClans: @clans - Jogadores: @players'
+- ''
+finalizado:
+- ''
+- '&bEvento gladiador foi finalizado!'
+- '&bClan Ganhador: &f@clan'
+- '&bMito: &f@mito'
+- '&bGladiadores: &f@ganhadores'
+- ''
+clans: '&b[Gladiador] Clans vivos no evento gladiador: @clans'
+mito: '&f@newmito &7é o novo &f@tagmito &7do servidor.'
+kill: '&7@morto foi morto por @killer &8(&f@kills &7Abates&8)'
