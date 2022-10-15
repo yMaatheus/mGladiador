@@ -70,10 +70,10 @@ public class GladiadorListener implements Listener {
 					if (player.getKiller() != null) {
 						killer = player.getKiller();
 						String clans = ClansAPI.getClanList(gladiador).toString().replace("[", "").replace("]", "");
-						Bukkit.broadcastMessage(instance.getAnnouncementsConfig().getString("clans").replace("@clans", clans).replace("&", "§"));
+						Bukkit.broadcastMessage(instance.getAnnouncementsConfig().getString("clans").replace("@clans", clans).replace("&", "ï¿½"));
 						if (gladiador.getParticipantes().containsKey(killer)) {
 							int kills = gladiador.getpKills().get(killer.getName().toLowerCase()) + 1;
-							Bukkit.broadcastMessage(instance.getAnnouncementsConfig().getString("kill").replace("@morto", player.getName()).replace("@killer", killer.getName()).replace("@kills", String.valueOf(kills)).replace("&", "§"));
+							Bukkit.broadcastMessage(instance.getAnnouncementsConfig().getString("kill").replace("@morto", player.getName()).replace("@killer", killer.getName()).replace("@kills", String.valueOf(kills)).replace("&", "Â§"));
 							gladiador.getpKills().put(killer.getName().toLowerCase(), kills);
 						}
 					}

@@ -44,9 +44,9 @@ public class Gladiador {
 			String clans = String.valueOf(getClans().size());
 			String participantes = String.valueOf(getParticipantes().size());
 			for (String message : settings.getWarning().getAnnounceMessage()) {
-				String messageReplaced = message.replace("@tempo", tempo).replace("@clans", clans).replace("@players", participantes).replace("&", "ง");
+				String messageReplaced = message.replace("@tempo", tempo).replace("@clans", clans).replace("@players", participantes).replace("&", "ยง");
 				if (message.contains("@botao")) {
-					messageReplaced = messageReplaced.replace("@botao", settings.getWarning().getButton().replace("&", "ง"));
+					messageReplaced = messageReplaced.replace("@botao", settings.getWarning().getButton().replace("&", "ยง"));
 					ClickEvent clickEvent = new ClickEvent(Action.RUN_COMMAND, "/gladiador");
 					player.spigot().sendMessage(new TextComponent_B(messageReplaced).setClickEvent(clickEvent).toTextComponent());
 				} else {
@@ -59,14 +59,14 @@ public class Gladiador {
 	public void announceClose(GladiadorSettings settings, int alerts, int time) {
 		for (String message : settings.getStarting().getAnnounceMessage()) {
 			String tempo = String.valueOf((alerts - getAlerts()) * time);
-			String messageReplaced = message.replace("@tempo", tempo).replace("@clans", getClansSize()).replace("@players", getPlayersSize()).replace("&", "ง");
+			String messageReplaced = message.replace("@tempo", tempo).replace("@clans", getClansSize()).replace("@players", getPlayersSize()).replace("&", "ยง");
 			Bukkit.broadcastMessage(messageReplaced);
 		}
 	}
 	
 	public void announceStartPvP(Main instance) {
 		for (String message : instance.getAnnouncementsConfig().getStringList("iniciou")) {
-			String messageReplaced = message.replace("@clans", getClansSize()).replace("@players", getPlayersSize()).replace("&", "ง");
+			String messageReplaced = message.replace("@clans", getClansSize()).replace("@players", getPlayersSize()).replace("&", "ยง");
 			Bukkit.broadcastMessage(messageReplaced);
 		}
 	}
@@ -74,27 +74,27 @@ public class Gladiador {
 	public void announceDeathmatch(GladiadorSettings settings, int alerts, int time) {
 		for (String message : settings.getDeathmatch().getAnnounceMessage()) {
 			String tempo = String.valueOf((alerts - getAlerts()) * time);
-			String messageReplaced = message.replace("@tempo", tempo).replace("@clans", getClansSize()).replace("@players", getPlayersSize()).replace("&", "ง");
+			String messageReplaced = message.replace("@tempo", tempo).replace("@clans", getClansSize()).replace("@players", getPlayersSize()).replace("&", "ยง");
 			Bukkit.broadcastMessage(messageReplaced);
 		}
 	}
 	
 	public void announceEnd(String clanTag, String mitoName, List<String> formatGladiadoresKills, Main instance) {
 		for (String message : instance.getAnnouncementsConfig().getStringList("finalizado")) {
-			String messageReplaced = message.replace("@clan", clanTag).replace("@ganhadores", getGladiadores(formatGladiadoresKills)).replace("@mito", mitoName).replace("&", "ง");
+			String messageReplaced = message.replace("@clan", clanTag).replace("@ganhadores", getGladiadores(formatGladiadoresKills)).replace("@mito", mitoName).replace("&", "ยง");
 			Bukkit.broadcastMessage(messageReplaced);
 		}
 	}
 	
 	public void announceCancelNotRequirements(Main instance) {
 		for (String message : instance.getAnnouncementsConfig().getStringList("cancelado.quantidadeInvalida")) {
-			Bukkit.broadcastMessage(message.replace("&", "ง"));
+			Bukkit.broadcastMessage(message.replace("&", "ยง"));
 		}
 	}
 	
 	public void announceCancel(Main instance) {
 		for (String message : instance.getAnnouncementsConfig().getStringList("cancelado.geral")) {
-			Bukkit.broadcastMessage(message.replace("&", "ง"));
+			Bukkit.broadcastMessage(message.replace("&", "ยง"));
 		}
 	}
 	

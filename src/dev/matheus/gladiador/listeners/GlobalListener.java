@@ -58,7 +58,7 @@ public class GlobalListener implements Listener {
 			for (String command : blockedCommandsGlobal) {
 				if ((message.startsWith(command + " ") || (message.equalsIgnoreCase(command)))) {
 					event.setCancelled(true);
-					player.sendMessage("§cComando bloqueado durantea a realização o evento gladiador.");
+					player.sendMessage("Â§cComando bloqueado durantea a realizacao o evento gladiador.");
 					break;
 				}
 			}
@@ -80,7 +80,7 @@ public class GlobalListener implements Listener {
 			}
 			if (!(find)) {
 				event.setCancelled(true);
-				player.sendMessage("§cComando bloqueado no modo espectador.");
+				player.sendMessage("Â§cComando bloqueado no modo espectador.");
 				return;
 			}
 		}

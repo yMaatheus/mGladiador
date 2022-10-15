@@ -46,7 +46,7 @@ public class GladiadorManager {
 			@Override
 			public boolean execute(CommandSender sender, String arg, String[] args) {
 				List<String> gladiadores = settings.getWinners().getGladiadores();
-				sender.sendMessage("§7Os gladiadores atuais são§8: §f" + gladiadores.toString());
+				sender.sendMessage("Â§7Os gladiadores atuais saoÂ§8: Â§f" + gladiadores.toString());
 				return false;
 			}
 		}, "gladiadores");
@@ -64,7 +64,7 @@ public class GladiadorManager {
 		}
 		this.gladiador = new Gladiador(instance);
 		startGladiador();
-		sender.sendMessage("§7Iniciando evento gladiador.");
+		sender.sendMessage("Â§7Iniciando evento gladiador.");
 	}
 	
 	public void startGladiador() {

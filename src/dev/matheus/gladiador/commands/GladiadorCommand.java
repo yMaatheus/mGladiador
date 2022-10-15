@@ -63,7 +63,7 @@ public class GladiadorCommand extends Command {
 						}
 						Gladiador gladiador = gladiadorManager.getGladiador();
 						if (gladiador.getStatus() == statusType.CHAMANDO) {
-							sender.sendMessage("§cAguarde o evento fechar para espectar.");
+							sender.sendMessage("Â§cAguarde o evento fechar para espectar.");
 							return true;
 						}
 						Player player = (Player) sender;
@@ -97,8 +97,8 @@ public class GladiadorCommand extends Command {
 				} else if (args[0].equalsIgnoreCase("top")) {
 					TopManager topManager = instance.getTopManager();
 					sender.sendMessage("");
-					sender.sendMessage("         §b§lTOP GLAD         ");
-					sender.sendMessage("  §7(Atulizado a cada 10 minutos) ");
+					sender.sendMessage("         Â§bÂ§lTOP GLAD         ");
+					sender.sendMessage("  Â§7(Atulizado a cada 10 minutos) ");
 					sender.sendMessage("");
 					List<GladiadorTop> m = topManager.getGladiadorTopList();
 					for (int a = 0; a < m.size(); a++) {
@@ -110,7 +110,7 @@ public class GladiadorCommand extends Command {
 						} else {
 							clan = b.getClan();
 						}
-						sender.sendMessage(" §f" + position + "§7. §b" + clan + " §7- §f" + b.getWins() +" vitórias");
+						sender.sendMessage(" Â§f" + position + "Â§7. Â§b" + clan + " Â§7- Â§f" + b.getWins() +" vitÂ§rias");
 					}
 					sender.sendMessage("");
 				} else if ((args[0].equalsIgnoreCase("ajuda")) || (args[0].equalsIgnoreCase("help"))) {
@@ -128,11 +128,11 @@ public class GladiadorCommand extends Command {
 							return false;
 						}
 						if (gladiadorManager.getGladiador().getStatus() != statusType.PVP) {
-							sender.sendMessage("§cSó é possivel forçar o inicio do deathmatch durante o status de PvP.");
+							sender.sendMessage("Â§cSo Ã© possivel forÃ§ar o inicio do deathmatch durante o status de PvP.");
 							return false;
 						}
 						gladiadorManager.deathmatch();
-						sender.sendMessage("§7Inicio de deathmacth forçado com sucesso.");
+						sender.sendMessage("Â§7Inicio de deathmacth forÃ§ado com sucesso.");
 						return true;
 					}
 					sender.sendMessage(instance.getMessage("semPermissao"));
@@ -179,7 +179,7 @@ public class GladiadorCommand extends Command {
 							if (find) {
 								LocationsManager locationsManager = instance.getLocationsManager();
 								locationsManager.set(name.toLowerCase(), player.getLocation());
-								sender.sendMessage("§77Localização §f" + name.toLowerCase() + " §7definida com sucesso!");
+								sender.sendMessage("Â§77LocalizaÂ§Â§o Â§f" + name.toLowerCase() + " Â§7definida com sucesso!");
 							}
 						}
 						return true;
@@ -219,7 +219,7 @@ public class GladiadorCommand extends Command {
 				return true;
 			}
 			if (gladiador.getParticipantes().containsKey(player)) {
-				sender.sendMessage("§cVocê já está no evento gladiador.");
+				sender.sendMessage("Â§cVocÂ§ jÂ§ estÂ§ no evento gladiador.");
 				return true;
 			}
 			SimpleClans simpleClans = instance.getSimpleClans();
@@ -253,25 +253,25 @@ public class GladiadorCommand extends Command {
 	}
 	
 	private void sendHelpCommands(CommandSender sender, String arg) {
-		String cmd = " §b /" + arg;
+		String cmd = " Â§b /" + arg;
 		sender.sendMessage("");
-		sender.sendMessage(cmd+" §f- §7Entre no evento quando estiver aberto.");
-		sender.sendMessage(cmd+" sair §f- §7Saia do evento gladiador.");
-		sender.sendMessage(cmd+" camarote §f- §7Entre/Saia do modo espectador.");
+		sender.sendMessage(cmd+" Â§f- Â§7Entre no evento quando estiver aberto.");
+		sender.sendMessage(cmd+" sair Â§f- Â§7Saia do evento gladiador.");
+		sender.sendMessage(cmd+" camarote Â§f- Â§7Entre/Saia do modo espectador.");
 		if (sender.hasPermission("mgladiador.command.specs")){
-			sender.sendMessage(cmd+" specs §f- §7Habilite/Desabilite os espectadores.");
+			sender.sendMessage(cmd+" specs Â§f- Â§7Habilite/Desabilite os espectadores.");
 		}
-		sender.sendMessage(cmd+" top §f- §7Veja os clans que mais ganharam o evento gladiador.");
-		sender.sendMessage(cmd+" ajuda §f- §7Ver a lista de comandos.");
+		sender.sendMessage(cmd+" top Â§f- Â§7Veja os clans que mais ganharam o evento gladiador.");
+		sender.sendMessage(cmd+" ajuda Â§f- Â§7Ver a lista de comandos.");
 		sender.sendMessage("");
 		if (sender.hasPermission("mgladiador.admin")) {
-			sender.sendMessage(cmd+" iniciar §f- §7Inicie o evento gladiador.");
-			sender.sendMessage(cmd+" forcedeathmatch §f- §7Force o inicio do deathmatch.");
-			sender.sendMessage(cmd+" parar §f- §7Cancele o evento gladiador.");
-			sender.sendMessage(cmd+" top reset §f- §7Limpe o top gladiador.");
-			sender.sendMessage(cmd+" top set (tag) (quantidade) §f- §7Defina a quantidade de vitórias de um clan.");
-			sender.sendMessage(cmd+" set (spawn | saida | deathmacth) §f- §7Salve as localizaçoes.");
-			sender.sendMessage(cmd+" info §f- §7Obtenha informações do evento gladiador.");
+			sender.sendMessage(cmd+" iniciar Â§f- Â§7Inicie o evento gladiador.");
+			sender.sendMessage(cmd+" forcedeathmatch Â§f- Â§7Force o inicio do deathmatch.");
+			sender.sendMessage(cmd+" parar Â§f- Â§7Cancele o evento gladiador.");
+			sender.sendMessage(cmd+" top reset Â§f- Â§7Limpe o top gladiador.");
+			sender.sendMessage(cmd+" top set (tag) (quantidade) Â§f- Â§7Defina a quantidade de vitÂ§rias de um clan.");
+			sender.sendMessage(cmd+" set (spawn | saida | deathmacth) Â§f- Â§7Salve as localizaÂ§oes.");
+			sender.sendMessage(cmd+" info Â§f- Â§7Obtenha informaÂ§Â§es do evento gladiador.");
 			sender.sendMessage("");
 		}
 	}
@@ -283,33 +283,33 @@ public class GladiadorCommand extends Command {
 		}
 		Gladiador gladiador = gladiadorManager.getGladiador();
 		sender.sendMessage("");
-		sender.sendMessage("§b* §7Jogo§8:");
+		sender.sendMessage("Â§b* Â§7JogoÂ§8:");
 		sender.sendMessage("");
 		String status = gladiador.getStatus().toString();
-		sender.sendMessage("§7Status§8: §f" + status);
+		sender.sendMessage("Â§7StatusÂ§8: Â§f" + status);
 		String tempo = TimeFormater.formatOfEnd(gladiador.getTime());
 		statusType s = gladiador.getStatus();
 		if ((s == statusType.CHAMANDO) || (s == statusType.FECHADO)) {
-			sender.sendMessage("§7Tempo§8: §fAinda irá começar a contagem!");
+			sender.sendMessage("Â§7TempoÂ§8: Â§fAinda ira comecar a contagem!");
 		} else if ((s == statusType.DEATHMATCH_PVPOFF) || (s == statusType.DEATHMATCH_PVPON)) {
-			sender.sendMessage("§7Tempo§8: §fDeathmatch já encontra-se em andamento.");
+			sender.sendMessage("Â§7TempoÂ§8: Â§fDeathmatch ja encontra-se em andamento.");
 		} else {
-			sender.sendMessage("§7Tempo§8: §f" + tempo);
+			sender.sendMessage("Â§7TempoÂ§8: Â§f" + tempo);
 		}
 		sender.sendMessage("");
-		sender.sendMessage("§b* §7Clans§8:");
+		sender.sendMessage("Â§b* Â§7ClansÂ§8:");
 		sender.sendMessage("");
 		String clansVivos = ClansAPI.getClanList(gladiador).toString().replace("[", "").replace("]", "");
-		sender.sendMessage("§7Clans vivos§8: §f" + clansVivos);
+		sender.sendMessage("Â§7Clans vivosÂ§8: Â§f" + clansVivos);
 		String nClans = gladiador.getClansSize();
-		sender.sendMessage("§7Quantidade§8: §f" + nClans);
+		sender.sendMessage("Â§7QuantidadeÂ§8: Â§f" + nClans);
 		sender.sendMessage("");
-		sender.sendMessage("§b* §7Jogadores§8:");
+		sender.sendMessage("Â§b* Â§7JogadoresÂ§8:");
 		sender.sendMessage("");
 		String playersVivos = ClansAPI.getPlayersList(gladiador).toString().replace("[", "").replace("]", "");
-		sender.sendMessage("§7Vivos§8: §f" + playersVivos);
+		sender.sendMessage("Â§7VivosÂ§8: Â§f" + playersVivos);
 		String nPlayers = gladiador.getPlayersSize();
-		sender.sendMessage("§7Quantidade§8: §f" + nPlayers);
+		sender.sendMessage("Â§7QuantidadeÂ§8: Â§f" + nPlayers);
 		sender.sendMessage("");
 	}
 }

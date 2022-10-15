@@ -92,7 +92,7 @@ public class TopManager {
 	
 	public void setMito(String playerName) {
 		String tag = gladiadorManager.getSettings().getWinners().getMitoPrefix();
-		String message = instance.getAnnouncementsConfig().getString("mito").replace("@newmito", playerName).replace("@tagmito", tag).replace("&", "§");
+		String message = instance.getAnnouncementsConfig().getString("mito").replace("@newmito", playerName).replace("@tagmito", tag).replace("&", "Â§");
 		Bukkit.broadcastMessage(message);
 		instance.getMainConfig().set("Gladiador.ganhadores.mito.atual", playerName);
 		try {
@@ -108,7 +108,7 @@ public class TopManager {
 	
 	public void setMito(Player player) {
 		String tag = gladiadorManager.getSettings().getWinners().getMitoPrefix();
-		String message = instance.getAnnouncementsConfig().getString("mito").replace("@newmito", player.getName()).replace("@tagmito", tag).replace("&", "§");
+		String message = instance.getAnnouncementsConfig().getString("mito").replace("@newmito", player.getName()).replace("@tagmito", tag).replace("&", "Â§");
 		Bukkit.broadcastMessage(message);
 		player.getWorld().strikeLightningEffect(player.getLocation());
 		player.getWorld().playEffect(player.getLocation(), Effect.PARTICLE_SMOKE, 10);
@@ -152,18 +152,18 @@ public class TopManager {
 			e.printStackTrace();
 		}
 		gladiadorUpdateTop();
-		sender.sendMessage("§7Gladiador §lTOP §7foi resetado com sucesso.");
+		sender.sendMessage("ï¿½7Gladiador ï¿½lTOP ï¿½7foi resetado com sucesso.");
 	}
 	
 	public void setWinsInGladiadorTop(String clan, int quantidade, CommandSender sender) {
 		if (instance.getSimpleClans().getClanManager().getClan(clan) == null) {
-			sender.sendMessage("§cEsse clan não existe.");
+			sender.sendMessage("ï¿½cEsse clan nï¿½o existe.");
 			return;
 		}
 		GladiadorTop gladiadorTop = getClan(clan);
 		gladiadorTop.setWins(quantidade);
 		instance.getTablesManager().saveClan(gladiadorTop);
-		sender.sendMessage("§7Você definiu as vitórias do clan §f" + clan + " §7para §f" + quantidade + "§7.");
+		sender.sendMessage("Â§7Voce definiu as vitorias do clan Â§f" + clan + " Â§7para Â§f" + quantidade + "Â§7.");
 	}
 	
 	public class GladiadorTop {

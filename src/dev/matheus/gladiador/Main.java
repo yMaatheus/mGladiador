@@ -44,13 +44,13 @@ public class Main extends JavaPlugin {
 			return;
 		}
 		if (!setupEconomy()) {
-			logError("Não foi possivel carregar a api do plugin 'Vault'.");
+			logError("Nï¿½o foi possivel carregar a api do plugin 'Vault'.");
 			logError("Desabilitando " + getDescription().getName() + "...");
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
 		if (!setupSimpleClans()) {
-			logError("Não foi possivel carregar a api do plugin 'SimpleClans'.");
+			logError("Nï¿½o foi possivel carregar a api do plugin 'SimpleClans'.");
 			logError("Desabilitando " + getDescription().getName() + "...");
 			Bukkit.getPluginManager().disablePlugin(this);
 			return;
@@ -125,7 +125,7 @@ public class Main extends JavaPlugin {
 	}
 	
 	public String getMessage(String args) {
-		return instance.messagesConfig.getString(args).replace("&", "§");
+		return instance.messagesConfig.getString(args).replace("&", "Â§");
 	}
 
 	public List<String> getListMessage(String args) {
